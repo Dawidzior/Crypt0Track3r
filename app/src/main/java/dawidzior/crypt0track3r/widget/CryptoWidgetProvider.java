@@ -11,7 +11,7 @@ import android.widget.RemoteViews;
 
 import java.util.List;
 
-import dawidzior.crypt0track3r.CryptoModel;
+import dawidzior.crypt0track3r.model.CryptoModel;
 import dawidzior.crypt0track3r.CryptoModelRepository;
 import dawidzior.crypt0track3r.R;
 import dawidzior.crypt0track3r.retrofit.RetrofitService;

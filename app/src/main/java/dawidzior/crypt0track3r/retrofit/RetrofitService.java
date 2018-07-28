@@ -2,7 +2,7 @@ package dawidzior.crypt0track3r.retrofit;
 
 import java.util.List;
 
-import dawidzior.crypt0track3r.CryptoModel;
+import dawidzior.crypt0track3r.model.CryptoModel;
 import dawidzior.crypt0track3r.graph.CryptoDailyModel;
 import retrofit2.Call;
 import retrofit2.http.GET;

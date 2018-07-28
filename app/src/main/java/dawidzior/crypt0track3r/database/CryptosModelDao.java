@@ -7,7 +7,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import dawidzior.crypt0track3r.CryptoModel;
+import dawidzior.crypt0track3r.model.CryptoModel;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 

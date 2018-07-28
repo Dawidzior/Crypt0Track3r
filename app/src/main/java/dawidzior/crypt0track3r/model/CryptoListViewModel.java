@@ -1,4 +1,4 @@
-package dawidzior.crypt0track3r;
+package dawidzior.crypt0track3r.model;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -6,6 +6,7 @@ import android.arch.lifecycle.LiveData;
 
 import java.util.List;
 
+import dawidzior.crypt0track3r.CryptoModelRepository;
 import dawidzior.crypt0track3r.database.CryptoModelDatabase;
 
 public class CryptoListViewModel extends AndroidViewModel {

@@ -1,6 +1,7 @@
-package dawidzior.crypt0track3r;
+package dawidzior.crypt0track3r.list;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +15,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import androidx.navigation.Navigation;
+//import androidx.navigation.Navigation;
+import dawidzior.crypt0track3r.App;
+import dawidzior.crypt0track3r.R;
+import dawidzior.crypt0track3r.details.DetailsActivity;
+import dawidzior.crypt0track3r.model.CryptoModel;
 
 public class CryptoItemsListAdapter extends RecyclerView.Adapter<CryptoItemsListAdapter.ViewHolder> {
 
@@ -55,8 +60,17 @@ public class CryptoItemsListAdapter extends RecyclerView.Adapter<CryptoItemsList
         holder.percentChange7DText.setText(crypto.getPercentChange7D() + PERCENTAGE);
         setPercentageColor(holder.percentChange7DText);
 
-        holder.itemView.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_list_to_details, createBundle(crypto)));
+//    TODO temporary switched off till stable release of the architecture component.
+//        holder.itemView.setOnClickListener(
+//                Navigation.createNavigateOnClickListener(R.id.action_list_to_details, createBundle(crypto)));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent details = new Intent(App.getContext(), DetailsActivity.class);
+                details.putExtras(createBundle(crypto));
+                App.getContext().startActivity(details);
+            }
+        });
 
     }
 

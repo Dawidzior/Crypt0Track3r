@@ -14,6 +14,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import dawidzior.crypt0track3r.database.CryptosModelDao;
+import dawidzior.crypt0track3r.model.CryptoModel;
 import dawidzior.crypt0track3r.retrofit.RetrofitService;
 import retrofit2.Call;
 import retrofit2.Callback;

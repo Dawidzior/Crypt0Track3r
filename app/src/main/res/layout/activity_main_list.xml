@@ -5,14 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainListActivity">
+    tools:context=".list.MainListActivity">
+
+    <!--TODO temporary switched off till stable release of the architecture component.-->
+
+    <!--<fragment-->
+        <!--android:id="@+id/fragment_nav_host"-->
+        <!--android:name="androidx.navigation.fragment.NavHostFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:defaultNavHost="true"-->
+        <!--app:navGraph="@navigation/nav_graph"/>-->
 
     <fragment
-        android:id="@+id/fragment_nav_host"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/main_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph"/>
+        android:name="dawidzior.crypt0track3r.list.MainListFragment"/>
 
 </android.support.constraint.ConstraintLayout>

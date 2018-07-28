@@ -1,4 +1,4 @@
-package dawidzior.crypt0track3r;
+package dawidzior.crypt0track3r.list;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -25,13 +25,15 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dawidzior.crypt0track3r.AutoUpdateJobService;
+import dawidzior.crypt0track3r.R;
+import dawidzior.crypt0track3r.model.CryptoListViewModel;
+import dawidzior.crypt0track3r.model.CryptoModel;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MainListFragment extends Fragment {
-
-    private List<CryptoModel> cryptoModelList = new ArrayList<>();
 
     private CryptoListViewModel viewModel;
 

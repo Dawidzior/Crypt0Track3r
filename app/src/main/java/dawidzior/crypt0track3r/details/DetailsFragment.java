@@ -1,4 +1,4 @@
-package dawidzior.crypt0track3r;
+package dawidzior.crypt0track3r.details;
 
 
 import android.annotation.SuppressLint;
@@ -34,6 +34,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dawidzior.crypt0track3r.App;
+import dawidzior.crypt0track3r.R;
 import dawidzior.crypt0track3r.graph.CryptoDailyModel;
 import dawidzior.crypt0track3r.graph.DayData;
 import dawidzior.crypt0track3r.retrofit.RetrofitService;
@@ -113,17 +115,17 @@ public class DetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_details, container, false);
         ButterKnife.bind(this, view);
 
-        coinName.setText(getString(R.string.name) + getArguments().getString("name"));
-        cryptoCode = getArguments().getString("symbol");
+        coinName.setText(getString(R.string.name) + getActivity().getIntent().getExtras().getString("name"));
+        cryptoCode = getActivity().getIntent().getExtras().getString("symbol");
         coinSymbol.setText(getString(R.string.symbol) + cryptoCode);
-        priceUsdText.setText(getString(R.string.usd_price) + getArguments().getString("priceUsd"));
-        percentChange1HText.setText(getString(R.string.hour_change_1) + getArguments().getString("percentChange1H"));
-        percentChange24HText.setText(getString(R.string.hour_change_24) + getArguments().getString("percentChange24H"));
-        percentChange7DText.setText(getString(R.string.days_change_7) + getArguments().getString("percentChange7D"));
-        totalSupplyText.setText(getString(R.string.total_supply) + getArguments().getString("totalSupply"));
-        maxSupplyText.setText(getString(R.string.max_supply) + getArguments().getString("maxSupply"));
-        volume24HText.setText(getString(R.string.volume) + getArguments().getString("volume24H"));
-        marketCapText.setText(getString(R.string.market_cap) + getArguments().getString("marketCap"));
+        priceUsdText.setText(getString(R.string.usd_price) + getActivity().getIntent().getExtras().getString("priceUsd"));
+        percentChange1HText.setText(getString(R.string.hour_change_1) + getActivity().getIntent().getExtras().getString("percentChange1H"));
+        percentChange24HText.setText(getString(R.string.hour_change_24) + getActivity().getIntent().getExtras().getString("percentChange24H"));
+        percentChange7DText.setText(getString(R.string.days_change_7) + getActivity().getIntent().getExtras().getString("percentChange7D"));
+        totalSupplyText.setText(getString(R.string.total_supply) + getActivity().getIntent().getExtras().getString("totalSupply"));
+        maxSupplyText.setText(getString(R.string.max_supply) + getActivity().getIntent().getExtras().getString("maxSupply"));
+        volume24HText.setText(getString(R.string.volume) + getActivity().getIntent().getExtras().getString("volume24H"));
+        marketCapText.setText(getString(R.string.market_cap) + getActivity().getIntent().getExtras().getString("marketCap"));
 
         Legend legend = chartView.getLegend();
         legend.setEnabled(false);

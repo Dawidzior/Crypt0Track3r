@@ -1,4 +1,4 @@
-package dawidzior.crypt0track3r;
+package dawidzior.crypt0track3r.model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;

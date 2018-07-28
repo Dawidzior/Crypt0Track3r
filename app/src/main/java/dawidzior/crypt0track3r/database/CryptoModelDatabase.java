@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import dawidzior.crypt0track3r.CryptoModel;
+import dawidzior.crypt0track3r.model.CryptoModel;
 
 @Database(entities = CryptoModel.class, version = 1)
 public abstract class CryptoModelDatabase extends RoomDatabase {
