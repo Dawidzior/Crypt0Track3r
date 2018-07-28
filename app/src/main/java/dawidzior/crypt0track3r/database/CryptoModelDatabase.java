@@ -7,7 +7,7 @@ import android.content.Context;
 
 import dawidzior.crypt0track3r.model.CryptoModel;
 
-@Database(entities = CryptoModel.class, version = 1)
+@Database(entities = CryptoModel.class, version = 1, exportSchema = false)
 public abstract class CryptoModelDatabase extends RoomDatabase {
 
     private static CryptoModelDatabase INSTANCE;
