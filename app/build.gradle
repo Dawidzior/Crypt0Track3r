@@ -2,16 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        configSigning {
-            keyAlias 'ReleaseTestKey'
-            keyPassword 'testzz'
-            storeFile file('release_test_key.jks')
-            storePassword 'testzz'
+        sign {
+            keyAlias 'key0'
+            keyPassword 'password12'
+            storeFile file("$rootDir/keystore.jks")
+            storePassword 'password12'
         }
     }
-
     compileSdkVersion 27
-
     defaultConfig {
         applicationId "dawidzior.crypt0track3r"
         minSdkVersion 21
@@ -20,15 +18,13 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.configSigning
+            signingConfig signingConfigs.sign
         }
     }
-
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
@@ -52,9 +48,9 @@ dependencies {
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
     implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
-//    TODO temporary switched off till stable release of the architecture component.
-//    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha04'
-//    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha04'
+    //    TODO temporary switched off till stable release of the architecture component.
+    //    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha04'
+    //    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha04'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation 'com.google.android.gms:play-services-analytics:16.0.1'
