@@ -25,7 +25,7 @@ public class CryptoListViewModel extends AndroidViewModel {
     }
 
     public void init() {
-        //Force refresh from Interet.
+        //Force refresh from Internet.
         CryptoModelRepository.refreshCryptos();
         cryptosModels = cryptoModelRepository.getCryptoModels();
     }
